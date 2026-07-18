@@ -15,8 +15,8 @@ server.listen(PORT, () => {
 
 // 2. Your Minecraft Bot configuration
 const botOptions = {
-  host: 'YOUR_SERVER_IP_OR_SUBDOMAIN', 
-  port: 25565,                         
+  host: '144.31.46.7', 
+  port: 13139,                         
   username: 'AFK_Bot_247',             
   version: false                       
 };
