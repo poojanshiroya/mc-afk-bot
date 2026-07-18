@@ -27,10 +27,17 @@ function initBot() {
   console.log('Connecting bot to server...');
   bot = mineflayer.createBot(botOptions);
 
-  bot.on('spawn', () => {
-    console.log('Bot successfully spawned in the world.');
-    startAntiAFK();
-  });
+          bot.on('spawn', () => {
+            console.log('Bot successfully spawned in the world.');
+            
+            // This types the register command 2 seconds after spawning
+            setTimeout(() => {
+                bot.chat('/login 12341234');
+                console.log('Sent registration command to LoginSecurity.');
+            }, 2000);
+
+            startAntiAFK();
+        });
 
   bot.on('death', () => {
     console.log('Bot died. Respawning...');
